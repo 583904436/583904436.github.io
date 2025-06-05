@@ -1,6 +1,254 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>欢迎来到光浅和小尘的罗小黑世界！</h1>
-  </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>罗小黑战记 - 小黑的世界</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('xiaohei.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4ecdc4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .character-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: color 0.3s ease;
+        }
+
+        .character-list li:hover {
+            color: #96ceb4;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">罗小黑战记</h1>
+            <p class="subtitle">一只会妖术的小黑猫的奇幻冒险</p>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h2>关于小黑</h2>
+                <p>
+                    <span class="highlight">罗小黑</span>是一只拥有神奇妖术的小黑猫，外表可爱但实力强大。他拥有分身术、变形术等多种妖术能力，性格单纯善良，但有时也会调皮捣蛋。在城市中与人类小女孩罗小白一起生活，经历了许多温馨有趣的日常故事。
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>故事背景</h2>
+                <p>
+                    故事发生在一个妖精与人类共存的现代都市中。小黑原本生活在森林里，后来因为栖息地被破坏而流落到城市，被善良的小白收留。在这个充满现代科技的城市里，小黑需要适应新的生活环境，同时也要面对各种挑战和冒险。
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>主要角色</h2>
+                <ul class="character-list">
+                    <li><strong>罗小黑</strong> - 主角，会妖术的小黑猫</li>
+                    <li><strong>罗小白</strong> - 收留小黑的善良女孩</li>
+                    <li><strong>老君</strong> - 小黑的师父，实力强大的妖精</li>
+                    <li><strong>哪吒</strong> - 执法者，负责维护妖精与人类的秩序</li>
+                    <li><strong>无限</strong> - 反派角色，拥有强大力量的妖精</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>作品特色</h2>
+                <p>
+                    《罗小黑战记》以其<span class="highlight">精美的2D动画</span>、<span class="highlight">流畅的打斗场面</span>和<span class="highlight">温馨的日常故事</span>而著名。作品既有激烈的战斗情节，也有治愈人心的温情时刻，完美平衡了动作与情感元素。独特的美术风格和优秀的音乐配乐让这部作品在众多动画中脱颖而出。
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>罗小黑战记 - 温暖治愈的妖精世界</p>
+            <p style="margin-top: 10px; opacity: 0.7;">让我们一起进入小黑的奇妙冒险吧！</p>
+        </div>
+    </div>
+
+    <script>
+        // 添加鼠标跟随效果
+        document.addEventListener('mousemove', function(e) {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+                }
+            });
+        });
+
+        document.addEventListener('mouseleave', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body>
 </html>
