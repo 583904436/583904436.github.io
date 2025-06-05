@@ -35,15 +35,45 @@
         }
 
         .title {
-            font-size: 3.5rem;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-            background-size: 300% 300%;
+            font-size: 4rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: gradientShift 3s ease-in-out infinite;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+
+        .title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            filter: blur(20px);
+            opacity: 0.3;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        .title::after {
+            content: '罗小黑战记';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            z-index: -1;
+            transform: translate(2px, 2px);
+            opacity: 0.6;
         }
 
         .subtitle {
@@ -204,7 +234,6 @@
                     <li><strong>罗小黑</strong> - 主角，会妖术的小黑猫</li>
                     <li><strong>罗小白</strong> - 收留小黑的善良女孩</li>
                     <li><strong>无限</strong> - 小黑的师父，实力强大的人类</li>
-                    <li><strong>哪吒</strong> - 执法者，负责维护妖精与人类的秩序</li>
                 </ul>
             </div>
 
